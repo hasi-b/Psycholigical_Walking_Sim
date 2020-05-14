@@ -5,6 +5,14 @@ TagManager:
   serializedVersion: 2
   tags:
   - Audio
+  - collidor
+  - anothercollidor
+  - left
+  - right
+  - blue
+  - red
+  - Door
+  - cube
   layers:
   - Default
   - TransparentFX
@@ -14,7 +22,7 @@ TagManager:
   - UI
   - 
   - 
-  - 
+  - text
   - 
   - 
   - 
