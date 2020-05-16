@@ -13,6 +13,12 @@ TagManager:
   - red
   - Door
   - cube
+  - col1
+  - col2
+  - text
+  - col3
+  - Doorcoll
+  - dc
   layers:
   - Default
   - TransparentFX

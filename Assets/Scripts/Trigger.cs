@@ -1,6 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class Trigger : MonoBehaviour
 {
@@ -124,8 +125,8 @@ public class Trigger : MonoBehaviour
         }
         if(other.tag == "red" )
         {
-            
-            Application.Quit();
+
+            SceneManager.LoadSceneAsync("ThirdScene");
         }
         if(other.tag == "blue" )
         {
