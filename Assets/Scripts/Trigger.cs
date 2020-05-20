@@ -32,6 +32,7 @@ public class Trigger : MonoBehaviour
     public float check = 0f;
     public float counter=0;
     public float finalcheck = 0f;
+    alternates al;
     SpawnFirstText sT;
     Vector3 pPosition = new Vector3(-0.92f, 1.32f, 19.74f);  //position of the piano to spawn
   
@@ -39,11 +40,13 @@ public class Trigger : MonoBehaviour
    
    IEnumerator Appear()
     {
-        yield return new WaitForSeconds(10f);
+        yield return new WaitForSeconds(30f);
     }
     void Start()
     {
         sT = GameObject.FindGameObjectWithTag("Respawn").GetComponent<SpawnFirstText>();
+       
+
         startcor();
     }
 
@@ -125,13 +128,14 @@ public class Trigger : MonoBehaviour
         }
         if(other.tag == "red" )
         {
-
-            SceneManager.LoadSceneAsync("ThirdScene");
+            PlayerPrefs.SetInt("Scene", 2);
+            SceneManager.LoadScene("ThirdScene");
         }
         if(other.tag == "blue" )
         {
-            Debug.Log("CUT");
-            Application.Quit();
+            PlayerPrefs.SetInt("Scene", 1);
+            SceneManager.LoadScene("FourthScene");
+            
         }
 
     }

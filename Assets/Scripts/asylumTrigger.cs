@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 using TMPro;
+using UnityEngine.SceneManagement;
 
 public class asylumTrigger : MonoBehaviour
 {
@@ -16,7 +17,7 @@ public class asylumTrigger : MonoBehaviour
     public GameObject door;
     public GameObject teddy;
     public GameObject anotherdoor;
-   
+    public int check;
     TextMeshPro tmp;
     public Vector3 vincen= new Vector3(-14.695f, 2.02857f, 2.472f);
     public Vector3 earnie = new Vector3(-6.66f,1.96f,2.486f);
@@ -26,6 +27,7 @@ public class asylumTrigger : MonoBehaviour
     private void Start()
     {
         tmp = GameObject.FindGameObjectWithTag("text").GetComponent<TextMeshPro>();
+        check = PlayerPrefs.GetInt("Scene");
     }
     private void OnTriggerEnter(Collider other)
     {
@@ -55,9 +57,13 @@ public class asylumTrigger : MonoBehaviour
             Destroy(Bed);
 
         }
-        if (other.tag == "dc")
+        if (other.tag == "dc" && check==2)
         {
-            Debug.Log("SO");
+            SceneManager.LoadScene("FourthScene");
+        }
+        if (other.tag == "dc" && check == 1)
+        {
+            SceneManager.LoadScene("FifthScene");
         }
     }
 }

@@ -19,6 +19,21 @@ TagManager:
   - col3
   - Doorcoll
   - dc
+  - sun
+  - text1
+  - text2
+  - stim
+  - lcol1
+  - lcol2
+  - lcol3
+  - lcol4
+  - lcol5
+  - lcol6
+  - ad
+  - newcol1
+  - sf
+  - ND
+  - ND2
   layers:
   - Default
   - TransparentFX
